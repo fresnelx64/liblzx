@@ -1,9 +1,499 @@
-﻿# CMakeList.txt : Top-level CMake project file, do global configuration
-# and include sub-projects here.
-#
-cmake_minimum_required (VERSION 3.8)
+﻿# cmake minimum version req:
+cmake_minimum_required (VERSION 3.12 FATAL_ERROR)
 
-project ("liblzx")
+# project name + version:
+project ("liblzx" VERSION 0.0.1.0)
 
-# Include sub-projects.
-add_subdirectory ("liblzx")
+# sub-projects tree:
+add_subdirectory ("api")
+add_subdirectory ("bench")
+add_subdirectory ("bins")
+add_subdirectory ("compilers")
+add_subdirectory ("compilers\\FASM")
+add_subdirectory ("compilers\\GCC")
+add_subdirectory ("compilers\\IntelC")
+add_subdirectory ("compilers\\MASM")
+add_subdirectory ("compilers\\MinGW")
+add_subdirectory ("compilers\\MSVC")
+add_subdirectory ("compilers\\NASM")
+add_subdirectory ("compilers\\TinyCC")
+
+# features options:
+option (LZX_SHARED_X86			"Featuring shared library <liblzx86.dll> x86-32"	ON)
+option (LZX_SHARED_X64			"Featuring shared library <liblzx64.dll> x86-64"	ON)
+option (LZX_STATIC_X86			"Featuring static library <liblzx86.lib> x86-32"	ON)
+option (LZX_STATIC_X64			"Featuring static library <liblzx86.lib> x86-64"	ON)
+option (LZX_BENCH_ALL			"Benchmark performance via all data-corps"			ON)
+option (LZX_BENCH_SILESIA		""	ON)
+option (LZX_BENCH_CARDBERY		""	ON)
+option (LZX_BENCH_CALGARY		""	ON)
+option (LZX_COMPILER_FASM		""	ON)
+option (LZX_COMPILER_GCC		""	ON)
+option (LZX_COMPILER_IntelC		""	ON)
+option (LZX_COMPILER_MASM		""	ON)
+option (LZX_COMPILER_MinGW		""	ON)
+option (LZX_COMPILER_MSVC		""	ON)
+option (LZX_COMPILER_NASM		""	ON)
+option (LZX_COMPILER_TinyCC		""	ON)
+option (LZX_MANUAL_DOXYGEN		""	ON)
+option (LZX_LANG_ASM_X86		""	ON)
+option (LZX_LANG_ASM_X64		""	ON)
+option (LZX_LANG_C11_X86		""	ON)
+option (LZX_LANG_C11_X64		""	ON)
+option (LZX_OUTPUT_CLI			""	ON)
+option (LZX_OUTPUT_LIBS			""	ON)
+option (LZX_OUTPUT_SDK			""	ON)
+option (LZX_OUTPUT_TOOLS		""	ON)
+option (LZX_TOOLKITS_DIFF		""	ON)
+option (LZX_TOOLKITS_DUMP		""	ON)
+option (LZX_TOOLKITS_LZBENCH	""	ON)
+option (LZX_TOOLKITS_SYSINFO	""	ON)
+option (LZX_TOOLKITS_UNPAK		""	ON)
+
+# compiler settings:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
