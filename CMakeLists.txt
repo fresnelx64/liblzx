@@ -36,6 +36,15 @@ add_subdirectory ("extern\\libmt")
 add_subdirectory ("extern\\libpak")
 add_subdirectory ("extern\\libsys")
 add_subdirectory ("include")
+add_subdirectory ("include\\arithmetic")
+add_subdirectory ("include\\deflate")
+add_subdirectory ("include\\huffman")
+add_subdirectory ("include\\lz4")
+add_subdirectory ("include\\lzo")
+add_subdirectory ("include\\lzham")
+add_subdirectory ("include\\lzma")
+add_subdirectory ("include\\lzsse")
+add_subdirectory ("include\\")
 add_subdirectory ("langs")
 add_subdirectory ("langs\\asm")
 add_subdirectory ("langs\\c11")
@@ -46,8 +55,23 @@ add_subdirectory ("output\\cli")
 add_subdirectory ("output\\libs")
 add_subdirectory ("output\\sdk")
 add_subdirectory ("output\\tools")
+add_subdirectory ("results")
+add_subdirectory ("results\\benchmarks")
+add_subdirectory ("results\\debugging")
+add_subdirectory ("results\\profiling")
+add_subdirectory ("results\\testing")
 add_subdirectory ("scripts")
+add_subdirectory ("scripts\\perfs")
+add_subdirectory ("scripts\\units")
 add_subdirectory ("source")
+add_subdirectory ("source\\arithmetic")
+add_subdirectory ("source\\deflate")
+add_subdirectory ("source\\huffman")
+add_subdirectory ("source\\lz4")
+add_subdirectory ("source\\lzo")
+add_subdirectory ("source\\lzham")
+add_subdirectory ("source\\lzma")
+add_subdirectory ("source\\lzsse")
 add_subdirectory ("test")
 add_subdirectory ("test\\integration")
 add_subdirectory ("test\\performance")
@@ -115,70 +139,6 @@ set (COMPILER_TinyCC_FLAGS		"-o3")
 set (COMPILER_WatcomV2_FLAGS	"-o3")
 
 # TODO...
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
