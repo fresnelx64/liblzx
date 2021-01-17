@@ -1,5 +1,5 @@
-#pragma once
-
+﻿# cmake minimum version req:
+cmake_minimum_required (VERSION 3.12 FATAL_ERROR)
 
 
 

@@ -4,7 +4,7 @@
 #define LZX_DEF_7903192103161108
 
 ifdef (__cplusplus)
-extern "C" {
+	extern "C" {
 #endif
 
 #include <stdint.h>
@@ -25,7 +25,7 @@ typedef uint32_t u32;
 typedef uint64_t u64;
 
 #ifdef (__cplusplus)
-}
+	}
 endif
 
 #endif
