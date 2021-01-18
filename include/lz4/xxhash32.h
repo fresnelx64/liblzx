@@ -1,19 +1,419 @@
 #pragma once
 
-#ifndef XXH_H32_79
-#defune XXH_H32_79
+#ifndef XXH_H64_7903192103161108	1
+#define XXH_H64_7903192103161108	
+
+#include <stdint.h>
+
+#include "..\..\api\lzxapi.h"
+#include "..\..\core\lzxdef.h"
+#include "lz4def.h"
+#include "lz4err.h"
 
 #ifdef (__cplusplus)
 	extern "C" {
 #endif
 
-// TODO...	
+static const uint32_t XXH32_PRIME_1 = 2654435761U;
+static const uint32_t XXH32_PRIME_2 = 2246822519U;
+static const uint32_t XXH32_PRIME_3 = 3266489917U;
+static const uint32_t XXH32_PRIME_4 = 668265263U;
+static const uint32_t XXH32_PRIME_5 = 374761393U;
+
+typedef struct { unsigned char digest[4]; } XXH32_canonical_t;
+
+struct XXH32_state_s 
+{
+	uint32_t total_len_32;
+	uint32_t large_len;
+	uint32_t v1;
+	uint32_t v2;
+	uint32_t v3;
+	uint32_t v4;
+	uint32_t mem32[4];
+	uint32_t memsize;
+	uint32_t reserved;
+};
+
+typedef unsigned int XXH32_hash_t;
+typedef struct XXH32_state_s XXH32_state_t;
+
+static uint32_t XXH_read32_unaligned(const void* memPtr);
+static uint32_t XXH_read32_packed(const void* memPtr);
+static uint32_t XXH_read32_safe(const void* memPtr);
+
+LZX_API XXH32_state_t* XXH32_createState(void);
+LZX_API XXH_errorcode  XXH32_freeState(XXH32_state_t* statePtr);
+LZX_API void XXH32_copyState(XXH32_state_t* dst_state, const XXH32_state_t* src_state);
+
+LZX_API XXH_errorcode XXH32_reset(XXH32_state_t* statePtr, unsigned int seed);
+LZX_API XXH_errorcode XXH32_update(XXH32_state_t* statePtr, const void* input, size_t length);
+LZX_API XXH32_hash_t  XXH32_digest(const XXH32_state_t* statePtr);
+
+LZX_API void XXH32_canonicalFromHash(XXH32_canonical_t* dst, XXH32_hash_t hash);
+LZX_API XXH32_hash_t XXH32_hashFromCanonical(const XXH32_canonical_t* src);
 
 #ifdef (__cplusplus)
 	}
 #endif
 
 #endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

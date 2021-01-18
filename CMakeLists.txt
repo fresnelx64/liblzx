@@ -1,5 +1,5 @@
 ﻿# cmake minimum version req:
-cmake_minimum_required (VERSION 3.12 FATAL_ERROR)
+cmake_minimum_required (VERSION 3.12.0 FATAL_ERROR)
 
 # project name + version:
 project ("liblzx" VERSION 0.0.1.0)
@@ -40,11 +40,11 @@ add_subdirectory ("include\\arithmetic")
 add_subdirectory ("include\\deflate")
 add_subdirectory ("include\\huffman")
 add_subdirectory ("include\\lz4")
-add_subdirectory ("include\\lzo")
 add_subdirectory ("include\\lzham")
 add_subdirectory ("include\\lzma")
+add_subdirectory ("include\\lzo")
 add_subdirectory ("include\\lzsse")
-add_subdirectory ("include\\")
+add_subdirectory ("include\\zstd")
 add_subdirectory ("langs")
 add_subdirectory ("langs\\asm")
 add_subdirectory ("langs\\c11")
@@ -67,11 +67,11 @@ add_subdirectory ("source")
 add_subdirectory ("source\\arithmetic")
 add_subdirectory ("source\\deflate")
 add_subdirectory ("source\\huffman")
-add_subdirectory ("source\\lz4")
-add_subdirectory ("source\\lzo")
 add_subdirectory ("source\\lzham")
 add_subdirectory ("source\\lzma")
+add_subdirectory ("source\\lzo")
 add_subdirectory ("source\\lzsse")
+add_subdirectory ("source\\zstd")
 add_subdirectory ("test")
 add_subdirectory ("test\\integration")
 add_subdirectory ("test\\performance")
@@ -80,9 +80,9 @@ add_subdirectory ("test\\system")
 add_subdirectory ("test\\unit")
 add_subdirectory ("toolkits")
 add_subdirectory ("toolkits\\datagen")
+add_subdirectory ("toolkits\\entropy")
 add_subdirectory ("toolkits\\diff")
 add_subdirectory ("toolkits\\dump")
-add_subdirectory ("toolkits\\entropy")
 add_subdirectory ("toolkits\\lzbench")
 add_subdirectory ("toolkits\\sysinfo")
 add_subdirectory ("toolkits\\unpak")
@@ -139,15 +139,6 @@ set (COMPILER_TinyCC_FLAGS		"-o3")
 set (COMPILER_WatcomV2_FLAGS	"-o3")
 
 # TODO...
-
-
-
-
-
-
-
-
-
 
 
 
